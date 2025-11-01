@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LifeBlood — Connect with Local Blood Donors</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div class="loading" id="loading">
+        <div class="blood-drop-loader"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav id="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <i class="fas fa-heartbeat"></i>
+                <span>LifeBlood</span>
+            </div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#donors">Find Donors</a></li>
+                <li><a href="#become-donor">Become a Donor</a></li>
+                <li><a href="#request">Request a Donation</a></li>
+            </ul>
+            <div class="mobile-menu" id="mobileMenu">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="blood-drops" id="bloodDrops"></div>
+        <div class="hero-content">
+            <h1>Donate Blood, Save Lives</h1>
+            <p>We collect volunteer donor information so people in need can quickly find nearby donors.</p>
+            <div class="cta-buttons">
+                <a href="#become-donor" class="btn btn-primary">Become a Donor</a>
+                <a href="#donors" class="btn btn-secondary">Find Donors</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats">
+        <div class="stats-container">
+            <div class="stat-card">
+                <i class="fas fa-users"></i>
+                <div class="stat-number" data-target="50000">0</div>
+                <p>Lives Saved</p>
+            </div>
+            <div class="stat-card">
+                <i class="fas fa-hand-holding-heart"></i>
+                <div class="stat-number" data-target="25000">0</div>
+                <p>Active Donors</p>
+            </div>
+            <div class="stat-card">
+                <i class="fas fa-map-marked-alt"></i>
+                <div class="stat-number" data-target="150">0</div>
+                <p>Communities Served</p>
+            </div>
+            <div class="stat-card">
+                <i class="fas fa-tint"></i>
+                <div class="stat-number" data-target="100000">0</div>
+                <p>Units Collected</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="about-content">
+            <div class="about-image">
+                <img src="https://images.unsplash.com/photo-1615461066159-fea0960485d5?w=600&h=400&fit=crop" alt="Blood donation">
+            </div>
+            <div class="about-text">
+                <h2>Why Register as a Donor?</h2>
+                <p>This site is a community-run donor directory. We collect volunteer donor information so people in need can quickly find nearby donors and connect with them directly.</p>
+                <p>When someone submits a request for blood, registered donors in the specified area receive an email notification so they can respond if they're available. This helps families and hospitals locate donors faster.</p>
+                <p>Registering is quick and keeps you part of a local network of lifesavers. Please remember this platform is community-run and not a substitute for professional medical services.</p>
+                <p style="margin-top:1rem; color: #6b6b6b; font-size:0.95rem;">LifeBlood is not partnered with hospitals or medical providers — always verify medical guidance with a qualified professional.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blood Types Section -->
+    <section class="blood-types">
+        <h2>Blood Type Compatibility</h2>
+        <div class="blood-grid">
+            <div class="blood-card">
+                <div class="blood-type">A+</div>
+                <p>Can donate to A+, AB+</p>
+            </div>
+            <div class="blood-card">
+                <div class="blood-type">A-</div>
+                <p>Can donate to A+, A-, AB+, AB-</p>
+            </div>
+            <div class="blood-card">
+                <div class="blood-type">B+</div>
+                <p>Can donate to B+, AB+</p>
+            </div>
+            <div class="blood-card">
+                <div class="blood-type">B-</div>
+                <p>Can donate to B+, B-, AB+, AB-</p>
+            </div>
+            <div class="blood-card">
+                <div class="blood-type">AB+</div>
+                <p>Universal Plasma Donor</p>
+            </div>
+            <div class="blood-card">
+                <div class="blood-type">AB-</div>
+                <p>Can donate to AB+, AB-</p>
+            </div>
+            <div class="blood-card">
+                <div class="blood-type">O+</div>
+                <p>Can donate to all positive types</p>
+            </div>
+            <div class="blood-card">
+                <div class="blood-type">O-</div>
+                <p>Universal Blood Donor</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="process" id="process">
+        <h2>How the Directory Works</h2>
+        <div class="process-steps">
+            <div class="step">
+                <div class="step-icon">
+                    <i class="fas fa-user-plus"></i>
+                </div>
+                <h3>Register</h3>
+                <p>Create a donor profile with your contact details, blood type, and city so people nearby can find you.</p>
+            </div>
+            <div class="step">
+                <div class="step-icon">
+                    <i class="fas fa-calendar-check"></i>
+                </div>
+                <h3>Set Availability</h3>
+                <p>Mark where you're available to donate. Donate blood in that area in the time of need.</p>
+            </div>
+            <div class="step">
+                <div class="step-icon">
+                    <i class="fas fa-bell"></i>
+                </div>
+                <h3>Receive Notifications</h3>
+                <p>When a request is submitted for your area and blood type, you'll receive an email with the request details so you can decide if you can help.</p>
+            </div>
+            <div class="step">
+                <div class="step-icon">
+                    <i class="fas fa-phone-alt"></i>
+                </div>
+                <h3>Connect &amp; Coordinate</h3>
+                <p>If you can help, contact the requester directly to arrange the donation details and timing.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Available Donors Section -->
+    <section class="donors-section" id="donors">
+        <div class="donors-container">
+            <h2>Find Available Donors</h2>
+            <p class="section-subtitle">Search for blood donors in your area</p>
+            
+            <!-- Search Filters -->
+            <div class="search-filters">
+                <div class="filter-group">
+                    <label for="searchBloodType">Blood Type</label>
+                    <select id="searchBloodType">
+                        <option value="">All Blood Types</option>
+                        <option value="A+">A+</option>
+                        <option value="A-">A-</option>
+                        <option value="B+">B+</option>
+                        <option value="B-">B-</option>
+                        <option value="AB+">AB+</option>
+                        <option value="AB-">AB-</option>
+                        <option value="O+">O+</option>
+                        <option value="O-">O-</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label for="searchLocation">Location</label>
+                    <input type="text" id="searchLocation" placeholder="Enter city or area">
+                </div>
+                <button class="btn btn-primary" id="searchBtn">
+                    <i class="fas fa-search"></i> Search Donors
+                </button>
+            </div>
+
+            <!-- Donors List -->
+            <div class="donors-grid" id="donorsGrid">
+                <!-- Donors will be populated here -->
+            </div>
+
+            <div id="noDonors" class="no-donors" style="display: none;">
+                <i class="fas fa-search"></i>
+                <p>No donors found matching your criteria.</p>
+                <p>Try adjusting your search filters.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Toggle Forms Section (moved above forms) -->
+    <!-- removed standalone toggle section; toggle buttons will live inside the form containers so they visually belong to the forms -->
+
+    <!-- Become a Donor Section -->
+    <section class="become-donor-section" id="become-donor" style="display: block;">
+        <div class="request-container">
+            <div class="form-toggle-inside" style="display:flex; justify-content:center; margin-bottom:1.25rem;">
+                <div class="toggle-tabs" style="gap:1rem;">
+                    <button class="show-donor-btn toggle-tab-btn btn btn-primary" type="button">Become a Donor</button>
+                    <button class="show-request-btn toggle-tab-btn btn btn-secondary" type="button">Request Blood Donation</button>
+                </div>
+            </div>
+            <h2>Become a Donor</h2>
+            <p class="section-subtitle">Join our community of life-savers today!</p>
+            <form id="donorRegistrationForm">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="donorFirstName">First Name *</label>
+                        <input type="text" id="donorFirstName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="donorLastName">Last Name *</label>
+                        <input type="text" id="donorLastName" required>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="donorEmail">Email *</label>
+                        <input type="email" id="donorEmail" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="donorPhone">Phone Number *</label>
+                        <input type="tel" id="donorPhone" required>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="donorBloodType">Blood Type *</label>
+                        <select id="donorBloodType" required>
+                            <option value="">Select Blood Type</option>
+                            <option value="A+">A+</option>
+                            <option value="A-">A-</option>
+                            <option value="B+">B+</option>
+                            <option value="B-">B-</option>
+                            <option value="AB+">AB+</option>
+                            <option value="AB-">AB-</option>
+                            <option value="O+">O+</option>
+                            <option value="O-">O-</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="donorAge">Age *</label>
+                        <input type="number" id="donorAge" min="18" max="65" required>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="donorCity">City *</label>
+                        <input type="text" id="donorCity" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="donorState">State/Region *</label>
+                        <input type="text" id="donorState" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="donorAddress">Full Address *</label>
+                    <input type="text" id="donorAddress" required>
+                </div>
+                <div class="form-group">
+                    <label for="lastDonation">Last Donation Date (if applicable)</label>
+                    <input type="date" id="lastDonation">
+                </div>
+                <div class="form-group checkbox-group">
+                    <label>
+                        <input type="checkbox" id="availability" required>
+                        I am willing to be contacted when blood is needed
+                    </label>
+                </div>
+                <div class="form-group checkbox-group">
+                    <label>
+                        <input type="checkbox" id="terms" required>
+                        I agree to the terms and conditions and confirm that I am healthy and eligible to donate blood
+                    </label>
+                </div>
+                <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 1rem;">
+                    <i class="fas fa-user-plus"></i> Register as Donor
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Request Form Section -->
+    <section class="request-section" id="request" style="display: none;">
+        <div class="request-container">
+            <div class="form-toggle-inside" style="display:flex; justify-content:center; margin-bottom:1.25rem;">
+                <div class="toggle-tabs" style="gap:1rem;">
+                    <button class="show-donor-btn toggle-tab-btn btn btn-primary" type="button">Become a Donor</button>
+                    <button class="show-request-btn toggle-tab-btn btn btn-secondary" type="button">Request Blood Donation</button>
+                </div>
+            </div>
+            <h2>Request Blood Donation</h2>
+            <div class="request-info" style="background: #fff3f3; color: #b30000; border-left: 5px solid #dc143c; padding: 1rem 1.5rem; border-radius: 8px; margin-bottom: 2rem; font-size: 1.1rem;">
+                <i class="fas fa-bell" style="margin-right: 0.5rem;"></i>
+                When you submit a request, registered donors in the area you specify will be notified by email. This increases the chance of finding available donors nearby — please monitor your email and contact any respondents directly.
+            </div>
+            <form id="donationForm">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="firstName">First Name *</label>
+                        <input type="text" id="firstName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="lastName">Last Name *</label>
+                        <input type="text" id="lastName" required>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="email">Email *</label>
+                        <input type="email" id="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone *</label>
+                        <input type="tel" id="phone" required>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="bloodType">Blood Type *</label>
+                        <select id="bloodType" required>
+                            <option value="">Select Blood Type</option>
+                            <option value="A+">A+</option>
+                            <option value="A-">A-</option>
+                            <option value="B+">B+</option>
+                            <option value="B-">B-</option>
+                            <option value="AB+">AB+</option>
+                            <option value="AB-">AB-</option>
+                            <option value="O+">O+</option>
+                            <option value="O-">O-</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="date">Preferred Date *</label>
+                        <input type="date" id="date" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="location">Preferred Location *</label>
+                    <input type="text" id="location" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Additional Information</label>
+                    <textarea id="message" rows="4"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 1rem;">Submit Request</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials">
+        <h2>What Our Donors Say</h2>
+        <div class="testimonial-grid">
+            <div class="testimonial-card">
+                <p class="testimonial-text">"Donating blood has been one of the most rewarding experiences. Knowing that I can help save lives makes me feel like a real hero!"</p>
+                <div class="testimonial-author">
+                    <div class="author-avatar">JS</div>
+                    <div>
+                        <strong>John Smith</strong>
+                        <p>Regular Donor</p>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-card">
+                <p class="testimonial-text">"Registering was quick and simple. I received a notification for a nearby request and was able to respond and coordinate the donation directly — great way to help my community."</p>
+                <div class="testimonial-author">
+                    <div class="author-avatar">MJ</div>
+                    <div>
+                        <strong>Maria Johnson</strong>
+                        <p>First-time Donor</p>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-card">
+                <p class="testimonial-text">"As someone who received blood during surgery, I understand its importance. Now I donate regularly to give back to the community."</p>
+                <div class="testimonial-author">
+                    <div class="author-avatar">RW</div>
+                    <div>
+                        <strong>Robert Williams</strong>
+                        <p>Grateful Recipient & Donor</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>About LifeBlood</h3>
+                <p>We are dedicated to connecting blood donors with those in need, ensuring a steady supply of safe blood for medical emergencies and treatments.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#process">Donation Process</a></li>
+                    <li><a href="#request">Request Blood</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <ul>
+                    <li><i class="fas fa-map-marker-alt"></i> 123 Health Street, Medical City</li>
+                    <li><i class="fas fa-phone"></i> +1 (555) 123-4567</li>
+                    <li><i class="fas fa-envelope"></i> info@lifeblood.org</li>
+                    <li><i class="fas fa-clock"></i> Community-run platform — an emergency connection building platform.</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 LifeBlood. All rights reserved. Save Lives, Donate Blood.</p>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+
+</body>
+</html>
